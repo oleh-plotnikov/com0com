@@ -34,8 +34,11 @@ int CALLBACK MainA(const char *pProgName, const char *pCmdLine);
 
 int _cdecl main(int argc, char *argv[])
 {
-  char cmd[1024] = "";
-
+#if 0
+	char cmd[1024] = "install PortName=COM# -";
+#else	
+	char cmd[1024] = "uninstall";
+#endif
   for (int i = 1 ; i < argc ; i++) {
     int lenCmd = lstrlen(cmd);
 
